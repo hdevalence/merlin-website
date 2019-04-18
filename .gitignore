@@ -1,3 +1,7 @@
+# mdbook output
+
+book/
+
 # Logs
 logs
 *.log
