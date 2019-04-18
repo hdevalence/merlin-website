@@ -6,7 +6,7 @@
   - [Transcript Operations](./transcript/ops.md)
   - [Generating Randomness](./transcript/rng.md)
 - [Using Merlin](./use/index.md)
-  - [Transcript Protocols](./transcript/protocol.md)
+  - [Transcript Protocols](./use/protocol.md)
   - [Sequential Composition](./use/composition.md)
   - [Prover-Verifier Duality](./use/duality.md)
 - [Test Vectors](./test_vectors.md)
