@@ -1,13 +1,11 @@
 <img style="margin: 1em; float:right; width: 33%;" src="/merlin.png">
 
-Merlin is a [STROBE][strobe]-based construction of a proof transcript which
-applies the Fiat-Shamir transform to an interactive public-coin
-argument of knowledge.  This allows implementing protocols as if they
-were interactive, committing messages to the proof transcript and
-obtaining challenges bound to all previous messages.
+Merlin is a [STROBE][strobe]-based transcript construction for zero-knowledge
+proofs.  It automates the Fiat-Shamir transform, so that by using Merlin,
+non-interactive protocols can be implemented as if they were interactive.
 
-In comparison to using a hash function directly, this design provides
-support for:
+This is significantly easier and less error-prone than performing the
+transformation by hand, and in addition, it also provides natural support for:
 
 * multi-round protocols with alternating commit and
 challenge phases;
@@ -19,10 +17,11 @@ bound to the statements to be proved;
 
 * and protocol composition, by using a common transcript for multiple protocols.
 
-In addition, Merlin provides a transcript-based random number generator.
-This provides synthetic randomness derived from
-the entire public transcript, as well as the prover's witness data,
-and an auxiliary input from an external RNG.
+Finally, Merlin also provides a transcript-based random number generator as
+defense-in-depth against bad-entropy attacks (such as nonce reuse, or bias over
+many proofs).  This RNG provides synthetic randomness derived from the entire
+public transcript, as well as the prover's witness data, and an auxiliary input
+from an external RNG.
 
 ## About
 
@@ -34,10 +33,16 @@ Hamburg for helpful discussions.  Merlin is named in reference to
 [Arthur-Merlin protocols][am_wiki] which introduced the notion of
 public coin arguments.
 
+The header image was created by Oleg Andreev as a composite of Arthur Pyle's
+[The Enchanter Merlin][merlin_pyle] and the Keccak Team's [θ-step
+diagram][keccak_theta].
+
 This project is licensed under the MIT license.
 
 [bp]: https://doc.dalek.rs/bulletproofs/
 [strobe]: https://strobe.sourceforge.io/
 [am_wiki]: https://en.wikipedia.org/wiki/Arthur%E2%80%93Merlin_protocol
+[merlin_pyle]: https://commons.wikimedia.org/wiki/File:Arthur-Pyle_The_Enchanter_Merlin.JPG
+[keccak_theta]: https://keccak.team/figures.html
 
 
