@@ -12,3 +12,6 @@
   - [Prover-Verifier Duality](./use/duality.md)
 - [Test Vectors](./test_vectors.md)
 - [Implementations](./implementations.md)
+- [Proof Systems Using Merlin](./users.md)
+- [Future Work](./future.md)
+
